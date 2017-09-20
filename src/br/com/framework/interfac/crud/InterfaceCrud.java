@@ -41,7 +41,7 @@ public interface InterfaceCrud<T> extends Serializable {
 	T findByPorId(Class<T> entidade, Long id) throws Exception; 
 	
 	List findListByQueryDinamica(String s) throws Exception;
-	
+		
 	//Executar update com HQL
 	void executeUpdateQueryDinamica(String s) throws Exception;
 	
@@ -64,6 +64,8 @@ public interface InterfaceCrud<T> extends Serializable {
 	SimpleJdbcTemplate getSimpleJdbcTemplate();
 	
 	SimpleJdbcInsert getSimpleJdbcInsert();
+	
+	SimpleJdbcTemplate getSimpleJdbcTemplateImpl();
 	
 	Long totalRegistro(String table) throws Exception;
 	
